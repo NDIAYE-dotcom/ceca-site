@@ -1,0 +1,191 @@
+/* ========== HERO FIXE ========== */
+.about-hero {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.about-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    border-radius: 12px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.about-hero-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.hero-about-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+.hero-about-btn:hover {
+    background-color: #0056b3;
+}
+
+/* ========== MOT DU DIRECTEUR ========== */
+.director-message {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 60px 10%;
+    background-color: #f8f9fa;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+.director-photo {
+    flex: 1 1 300px;
+    text-align: center;
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.director-photo img {
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.director-text {
+    flex: 2 1 500px;
+    padding: 20px 40px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+.director-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #002f5e;
+}
+
+.director-text h2 span {
+    color: #007bff;
+}
+
+.director-text p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.signature {
+    margin-top: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #555;
+}
+
+/* ========== À PROPOS ========== */
+.about-presentation {
+    padding: 60px 10%;
+    background-color: #ffffff;
+}
+
+.about-presentation .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-presentation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #002f5e;
+}
+
+.about-presentation p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.about-presentation .mission {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .director-message {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .director-text {
+        padding: 20px 0;
+    }
+
+    .about-hero-overlay h1 {
+        font-size: 2rem;
+    }
+
+    .hero-about-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
